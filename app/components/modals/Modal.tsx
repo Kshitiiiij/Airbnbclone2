@@ -35,7 +35,7 @@ const Modal: React.FC<ModalProps> = ({
     if (disabled) return;
     setShowModal(false);
     setTimeout(() => {
-      onClose;
+      onClose();
     }, 300);
   }, [onClose, disabled]);
 
@@ -60,7 +60,7 @@ const Modal: React.FC<ModalProps> = ({
             className={`translate duration-300 h-full ${
               showModal ? "translate-y-0" : "translate-y-full"
             }
-            {
+            ${
                 showModal ? "opacity-100" : "opacity-0"
               }`}
           >
@@ -88,11 +88,12 @@ const Modal: React.FC<ModalProps> = ({
                     />
                   )}
                   <Button
-                      disabled={disabled}
-                      label={actionLabel}
-                      onClick={handleSubmit}
-                    />
+                    disabled={disabled}
+                    label={actionLabel}
+                    onClick={handleSubmit}
+                  />
                 </div>
+                {fotter}
               </div>
             </div>
           </div>
