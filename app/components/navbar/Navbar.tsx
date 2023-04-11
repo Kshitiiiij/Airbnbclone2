@@ -1,9 +1,14 @@
-'use client'
+"use client";
+interface navbarProps {
+  currentUser?: User | null;
+}
 import Logo from "../Logo";
+import { User } from "@prisma/client";
 import Container from "../Container";
 import Search from "../Search";
-import UserMenu from '../UserMenu';
-export default function Navbar() {
+import UserMenu from "../UserMenu";
+export const Navbar: React.FC<navbarProps> = ({ currentUser }) => {
+  console.log({ currentUser });
   return (
     <div className="fixed w-full bg-white z-10 shadow-sm">
       <div className="py-4 border-b-[1px]">
@@ -11,10 +16,12 @@ export default function Navbar() {
           <div className="flex flex-row items-center justify-between gap-3 md:gap-0">
             <Logo />
             <Search />
-            <UserMenu />
+            <UserMenu currentUser={currentUser} />
           </div>
         </Container>
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;
