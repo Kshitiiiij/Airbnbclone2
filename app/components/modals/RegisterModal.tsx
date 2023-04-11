@@ -51,7 +51,7 @@ const RegisterModal = () => {
         label="Email"
         disabled={isloading}
         register={register}
-        error={errors}
+        errors={errors}
         required
       />
 
@@ -60,7 +60,7 @@ const RegisterModal = () => {
         label="Name"
         disabled={isloading}
         register={register}
-        error={errors}
+        errors={errors}
         required
       />
 
@@ -70,7 +70,7 @@ const RegisterModal = () => {
         label="Password"
         disabled={isloading}
         register={register}
-        error={errors}
+        errors={errors}
         required
       />
     </div>
@@ -114,7 +114,7 @@ const RegisterModal = () => {
       onClose={registerModal.onClose}
       onSubmit={handleSubmit(onSubmit)}
       body={bodyContent}
-      fotter={footerContent}
+      footer={footerContent}
     />
   );
 };
