@@ -11,8 +11,10 @@ import Input from "../Input";
 import { toast } from "react-hot-toast";
 import Button from "../Button";
 import { signIn } from "next-auth/react";
+import useLoginModal from "@/app/hooks/useLoginModal";
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
+  const loginModal = useLoginModal();
   const [isloading, setIsLoading] = useState(false);
 
   const {
@@ -98,13 +100,19 @@ const RegisterModal = () => {
         <div className="flex flex-row justify-center items-center gap-2">
           <div>Already have an account?</div>
 
-          <div onClick={() => registerModal.onClose()} className="text-neutral-800 cursor-pointer hover:underline">
+          <div onClick={() => toggle()} className="text-neutral-800 cursor-pointer hover:underline">
             Login
           </div>
         </div>
       </div>
     </div>
   );
+
+  const toggle = useCallback(() => {
+    registerModal.onClose();
+    loginModal.onOpen();
+  }, [loginModal, registerModal])
+
 
   return (
     <Modal

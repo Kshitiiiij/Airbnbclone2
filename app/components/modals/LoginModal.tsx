@@ -112,7 +112,7 @@ const LoginModal = () => {
       text-neutral-500 text-center mt-4 font-light">
         <p>First time using Airbnb?
           <span 
-            onClick={onToggle} 
+            onClick={() => toggle()} 
             className="
               text-neutral-800
               cursor-pointer 
@@ -123,6 +123,11 @@ const LoginModal = () => {
       </div>
     </div>
   )
+
+  const toggle = useCallback(() => {
+    loginModal.onClose();
+    registerModal.onOpen();
+  }, [loginModal, registerModal])
 
   return (
     <Modal
