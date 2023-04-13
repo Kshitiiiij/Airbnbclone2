@@ -8,7 +8,7 @@ import CategoryInput from "../input/CategoryInput";
 import { useForm, FieldValues } from "react-hook-form";
 import CountrySelect from "../input/CountrySelect";
 import dynamic from "next/dynamic";
-import Counter from "../input/Counter"
+import Counter from "../input/Counter";
 
 enum STEPS {
   CATEGORY = 0,
@@ -51,10 +51,13 @@ const RentModal = () => {
   const roomCount = watch("roomCount");
   const bathroomCount = watch("bathroomCount");
 
-
-  const Map = useMemo(() => dynamic(() => import('../Map'), { 
-    ssr: false 
-  }), [location]);
+  const Map = useMemo(
+    () =>
+      dynamic(() => import("../Map"), {
+        ssr: false,
+      }),
+    [location]
+  );
 
   const setCustomeValue = (id: string, value: any) => {
     setValue(id, value, {
@@ -109,48 +112,46 @@ const RentModal = () => {
           title="Where is your place located"
           subtitle="Help guests find you"
         />
-        <CountrySelect 
-        value={location}
-        onChange={(value) =>setCustomeValue('location', value)}
+        <CountrySelect
+          value={location}
+          onChange={(value) => setCustomeValue("location", value)}
         />
-        <Map 
-        
-        center={location?.latlng}/>
+        <Map center={location?.latlng} />
       </div>
     );
   }
 
-  if(step == STEPS.INFO) {
+  if (step == STEPS.INFO) {
     bodyContent = (
       <div className="flex flex-col gap-8">
-        <Heading 
+        <Heading
           title="Share some basics about your place"
           subtitle="What amenities do you offer?"
         />
-        <Counter 
-        title="Guests"
-        subtitle="How many guests do you allow?"
-        value={guestCount}
-        onChange={(value) => setCustomeValue('guestCount', value)}
+        <Counter
+          title="Guests"
+          subtitle="How many guests do you allow?"
+          value={guestCount}
+          onChange={(value) => setCustomeValue("guestCount", value)}
         />
-        <hr/>
+        <hr />
 
-        <Counter 
-        title="Rooms"
-        subtitle="How many Rooms do you have?"
-        value={roomCount}
-        onChange={(value) => setCustomeValue('roomCount', value)}
+        <Counter
+          title="Rooms"
+          subtitle="How many Rooms do you have?"
+          value={roomCount}
+          onChange={(value) => setCustomeValue("roomCount", value)}
         />
-        <hr/>
+        <hr />
 
-        <Counter 
-        title="Bathrooms"
-        subtitle="How many bathrooms do you have?"
-        value={bathroomCount}
-        onChange={(value) => setCustomeValue('bathroomCount', value)}
+        <Counter
+          title="Bathrooms"
+          subtitle="How many bathrooms do you have?"
+          value={bathroomCount}
+          onChange={(value) => setCustomeValue("bathroomCount", value)}
         />
       </div>
-    )
+    );
   }
   return (
     <Modal
