@@ -4,7 +4,7 @@ import ClientOnly from "./components/ClientOnly";
 import RegisterModal from "../app/components/modals/RegisterModal";
 import ToasterProvider from "./providers/ToasterProvider";
 import LoginModal from "../app/components/modals/LoginModal";
-import  {getCurrentUser}  from "./actions/getCurrentuser";
+import { getCurrentUser } from "./actions/getCurrentuser";
 import RentModal from "./components/modals/RentModal";
 export const metadata = {
   title: "Air BnB Clone",
@@ -16,7 +16,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const currentUser = await getCurrentUser()
+  const currentUser = await getCurrentUser();
   return (
     <html lang="en">
       <body>
@@ -26,9 +26,9 @@ export default async function RootLayout({
 
           <RegisterModal />
           <LoginModal />
-          <Navbar currentUser={currentUser}/>
+          <Navbar currentUser={currentUser} />
         </ClientOnly>
-        {children}
+        <div className="pb-20 pt-28">{children}</div>
       </body>
     </html>
   );
