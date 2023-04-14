@@ -239,6 +239,7 @@ const RentModal = () => {
         type="number"
         register={register}
         errors={errors}
+        disabled={isLoading}
         required
         />
       </div>
