@@ -212,7 +212,7 @@ const RentModal = () => {
           required
         />
         <Input
-          id="descripton"
+          id="description"
           label="Description"
           disabled={isLoading}
           register={register}
