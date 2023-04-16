@@ -1,15 +1,15 @@
 "use client";
 import { useCallback, useState } from "react";
-import MenuItem from "./navbar/MenuItems";
-import Avatar from "./Avatar";
+import MenuItem from "./MenuItems";
+import Avatar from "../Avatar";
 import { AiOutlineMenu } from "react-icons/ai";
-import useRegisterModal from "../hooks/useRegisterModal";
-import useLoginModal from "../hooks/useLoginModal";
+import useRegisterModal from "../../hooks/useRegisterModal";
+import useLoginModal from "../../hooks/useLoginModal";
 import { User } from "@prisma/client";
 import { signOut } from "next-auth/react";
-import { SafeUser } from "../types";
-import RentModal from './modals/RentModal'
-import useRentModal from "../hooks/useRentModal";
+import { SafeUser } from "../../types";
+import RentModal from '../modals/RentModal'
+import useRentModal from "../../hooks/useRentModal";
 import {useRouter} from "next/navigation"
 interface userMenuProps {
   currentUser?: SafeUser | null;
