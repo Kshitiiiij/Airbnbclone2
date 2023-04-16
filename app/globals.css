@@ -33,3 +33,15 @@ body,
   font-size: 16px !important;
   width: 100% !important;
 }
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
