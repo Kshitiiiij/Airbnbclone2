@@ -31,7 +31,7 @@ const UserMenu: React.FC<userMenuProps> = ({ currentUser }) => {
       //open rent modal
       rentModal.onOpen()
     
-  }, [currentUser, loginModal])
+  }, [currentUser, loginModal, rentModal])
 
   const router = useRouter()
 
