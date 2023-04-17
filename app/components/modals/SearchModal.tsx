@@ -24,7 +24,7 @@ const SearchModal = () => {
   const router = useRouter();
   const params = useSearchParams();
 
-  const [location, setLocation] = useState<CountrySelectValue>();
+  const [locationValue, setLocationValue] = useState<CountrySelectValue>();
   const [step, setStep] = useState(STEP.LOCATION);
   const [guestCount, setGuestCount] = useState(1);
   const [roomCount, setRoomCount] = useState(1);
@@ -57,7 +57,7 @@ const SearchModal = () => {
       currentQuery = qs.parse(params.toString());
       const updatedQuery: any = {
         ...currentQuery,
-        location: location?.value,
+        locationValue: locationValue?.value,
         guestCount,
         roomCount,
         bathroomCount,
@@ -88,7 +88,7 @@ const SearchModal = () => {
     onNext,
     params,
     router,
-    location,
+    locationValue,
     guestCount,
     roomCount,
     bathroomCount,
@@ -112,12 +112,12 @@ const SearchModal = () => {
         subtitle="Find the perfect place to stay"
       />
       <CountrySelect
-        value={location}
-        onChange={(value) => setLocation(value as CountrySelectValue)}
+        value={locationValue}
+        onChange={(value) => setLocationValue(value as CountrySelectValue)}
       />
       <hr />
       <div className="">
-        <Map center={location?.latlng} />
+        <Map center={locationValue?.latlng} />
       </div>
     </div>
   );
