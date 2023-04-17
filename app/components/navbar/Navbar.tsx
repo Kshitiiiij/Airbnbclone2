@@ -3,7 +3,7 @@ import Logo from "../Logo";
 import { SafeUser } from "@/app/types";
 import { User } from "@prisma/client";
 import Container from "../Container";
-import Search from "../Search";
+import Search from "./Search";
 import UserMenu from "./UserMenu";
 import Categories from "./Categories"
 
