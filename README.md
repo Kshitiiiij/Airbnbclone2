@@ -28,5 +28,18 @@ Home Page
 
 ![image](https://user-images.githubusercontent.com/102326095/232797353-8d97b2c7-8758-41af-a7a9-1074368335cf.png)
 
+Login Page
+
+![image](https://user-images.githubusercontent.com/102326095/232798239-bad248ec-77a0-49fd-a053-f16f4f0de6a4.png)
+
+Favourites Page
+
+![image](https://user-images.githubusercontent.com/102326095/232798520-9baf9bee-9405-4335-988e-2236996cc33e.png)
+
+Reservation Page
+
+![image](https://user-images.githubusercontent.com/102326095/232799415-f79944b8-471e-4b92-a376-ea3f64a57b6c.png)
+
+
 
 
