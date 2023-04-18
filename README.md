@@ -41,5 +41,30 @@ Reservation Page
 ![image](https://user-images.githubusercontent.com/102326095/232799415-f79944b8-471e-4b92-a376-ea3f64a57b6c.png)
 
 
+## Development 
+
+Running dev server:
+```sh
+npm run build
+```
+## Environemt Variables
+
+.env
+Prisma to db connection string:
+```sh
+DATABASE_URL = "<URL goes here>"
+```
+
+.env.local:
+```sh
+NEXT_AUTH_SECRET="<Auth secret goes here>"
+GITHUB_ID="<Github Oauth id>"
+GITHUB_SECRET="<Github Oauth Secret>"
+GOOGLE_CLIENT_ID="<Google Oauth id>"
+GOOGLE_CLIENT_SECRET="<Google Oauth Secret"
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Coludinary name>"
+```
+
+
 
 
