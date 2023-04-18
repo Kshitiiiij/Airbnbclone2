@@ -26,7 +26,7 @@ This is a Next Js 13 airbnb clone created with the newest app directory. It uses
 
 Home Page
 
-file:///home/kshitij/Pictures/Screenshots/Screenshot%20from%202023-04-18%2019-16-36.png![image](https://user-images.githubusercontent.com/102326095/232797353-8d97b2c7-8758-41af-a7a9-1074368335cf.png)
+![image](https://user-images.githubusercontent.com/102326095/232797353-8d97b2c7-8758-41af-a7a9-1074368335cf.png)
 
 
 
